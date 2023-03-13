@@ -1,7 +1,12 @@
-fn main (){
-    let _true = false;
-    let mut _false = true;
-    if _true == !(!(_false)){
-        _false = false;
+fn main(){
+    println!("Hello World");
+}
+
+fn evenorodd(num: i32) -> String{
+    if num % 2 == 0{
+        return "Even".to_string();
+    }
+    else{
+        return "Odd".to_string();
     }
 }
