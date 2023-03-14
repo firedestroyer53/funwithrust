@@ -1,5 +1,2 @@
-
-
-fn main(){
-    println!("Die");
+fn main() {
 }
