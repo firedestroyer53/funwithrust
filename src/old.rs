@@ -137,3 +137,92 @@
 //     println!("{}", sum);
 
 // }
+
+// fn sum_arrays(arr1: &[i32], arr2: &[i32]) -> Vec<i32> {
+//     let mut result = Vec::new();
+//     for i in 0..arr1.len() {
+//         result.push(arr1[i] + arr2[i]);
+//     }
+//     result
+// }
+
+
+// fn longest_word(text: &str) -> &str {
+//     let mut longest = "";
+//     let textlist = text.split(" ").collect::<Vec<&str>>();
+//     for i in textlist{
+//         if i.len() > longest.len(){
+//             longest = i;
+//         }
+//     }
+//     longest
+// }
+
+//fn find_pairs(vec: &[i32], sum: i32) -> Vec<(i32, i32)> {
+//     let mut pairs = Vec::new();
+//     for i in 0..vec.len() {
+//         for j in i + 1..vec.len() {
+//             if vec[i] + vec[j] == sum {
+//                 pairs.push((vec[i], vec[j]));
+//             }
+//         }
+//     }
+//     pairs
+// }
+
+// fn find_triplets(vec: &[i32], sum: i32) -> Vec<(i32, i32, i32)> {
+//     let mut triplets = Vec::new();
+//     for i in 0..vec.len() {
+//         for j in i + 1..vec.len() {
+//             for k in j + 1..vec.len() {
+//                 if vec[i] + vec[j] + vec[k] == sum {
+//                     triplets.push((vec[i], vec[j], vec[k]));
+//                 }
+//             }
+//         }
+//     }
+//     triplets
+// }
+
+// fn find_anagrams(vec: &[&str]) -> Vec<Vec<&str>> {
+//     let mut anagrams = Vec::new();
+//     for i in 0..vec.len() {
+//         for j in i + 1..vec.len() {
+//             if is_anagram(vec[i], vec[j]) {
+//                 anagrams.push(vec![vec[i], vec[j]]);
+//             }
+//         }
+//     }
+//     anagrams
+// }
+
+// fn is_anagram(word1: &str, word2: &str) -> bool {
+//     let mut sorted1: Vec<char> = word1.to_lowercase().chars().collect();
+//     let mut sorted2: Vec<char> = word2.to_lowercase().chars().collect();
+//     sorted1.sort();
+//     sorted2.sort();
+//     sorted1 == sorted2
+// }
+
+// fn longest_palindrome(s: &str) -> i32 {
+//     let mut count = 0;
+//     let mut odd = false;
+//     let mut map = std::collections::HashMap::new();
+//     for c in s.chars() {
+//         let counter = map.entry(c).or_insert(0);
+//         *counter += 1;
+//     }
+//     for (_, v) in map {
+//         if v % 2 == 0 {
+//             count += v;
+//         } else {
+//             count += v - 1;
+//             odd = true;
+//         }
+//     }
+//     if odd {
+//         count + 1
+//     } else {
+//         count
+//     }
+// }
