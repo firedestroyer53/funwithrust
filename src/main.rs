@@ -1,21 +1,8 @@
-fn main(){
-    //first triangle number with over 500 divisors
-    let mut i = 1;
-    let mut triangle = 0;
-    while factors(triangle).len() < 500 {
-        triangle += i;
-        i += 1;
-    }
-    println!("{}", triangle);
+fn main() {
+    assert_eq!(product_except_self(vec![1, 2, 3, 4]), vec![24, 12, 8, 6]);
+    assert_eq!(product_except_self(vec![0, 1, 2, 3]), vec![6, 0, 0, 0]);
+    assert_eq!(product_except_self(vec![-1, -2, -3, -4]), vec![24, 12, 8, 6]);
+    assert_eq!(product_except_self(vec![1, 2]), vec![2, 1]);
 }
 
-//return factors of a number
-fn factors(n: i32) -> Vec<i32> {
-    let mut factors = Vec::new();
-    for i in 1..=n {
-        if n % i == 0 {
-            factors.push(i);
-        }
-    }
-    factors
-}
+
