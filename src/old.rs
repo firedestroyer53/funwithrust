@@ -22,7 +22,7 @@
 //         a = b;
 //         b = c;
 //     }
-//     println!("{}", sum); // prints 4613732
+//     println!("{}", sum);
 // }
 
 // fn largestprimefactor(){
@@ -225,4 +225,78 @@
 //     } else {
 //         count
 //     }
+// }
+
+// fn find_factors(n:i32) -> Vec<i32>{
+//     let mut i: i32 = 1;
+//     let mut factors = Vec::new();
+//     while i * i < n {
+//         if n % i == 0 {
+//             factors.push(i);
+//         }
+//         i += 1;
+//     }
+
+//     if i - (n / i) == 1 {
+//             i -= 1;
+//     }
+
+//     while i >= 1 {
+//         if n % i == 0 {
+//             factors.push(n / i);
+//         }
+//         i -= 1;
+//     }   
+//     factors
+// }
+
+// fn find_largest_three(mut numbers: Vec<i32>) -> Vec<i32> {
+//     numbers.sort_by(|a, b| b.cmp(a));
+//     numbers[0..3].to_vec()
+// }
+
+// fn longest_unique_substring(s: &str) -> usize {
+//     //return the longest unique substring that does not contain any repeating characters
+//     let mut longest = 0;
+//     let mut current = 0;
+//     let mut seen = Vec::new();
+//     for i in s.chars() {
+//         if seen.contains(&i) {
+//             if current > longest {
+//                 longest = current;
+//             }
+//             current = 0;
+//             seen.clear();
+//         }
+//         seen.push(i);
+//         current += 1;
+//     }
+//     if current > longest {
+//         longest = current;
+//     }
+//     longest
+// }
+
+// fn product_except_self(nums: Vec<i64>) -> Vec<i64> {
+//     // returns a vector of the product of all the numbers in the array except the number at that index
+//     let mut product = 1;
+//     let mut output = vec![];
+//     for i in 0..nums.len() {
+//         product *= nums[i];
+//     }
+//     for i in 0..nums.len() {
+//         //check if nums[i] is 0
+//         if nums[i] == 0 {
+//             let mut product = 1;
+//             for j in 0..nums.len() {
+//                 if j != i {
+//                     product *= nums[j];
+//                 }
+//             }
+//             output.push(product);
+//             continue;
+//         }
+//         output.push(product / nums[i]);
+//     }
+//     output
 // }
